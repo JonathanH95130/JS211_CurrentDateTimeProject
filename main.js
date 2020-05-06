@@ -14,12 +14,24 @@ const displayDate = () => {
 }
  
 
-// Write a JavaScript program to convert a number to a string.
-
-
-
 // Write a JavaScript program to convert a string to the number.
+const convertStrTonum = () => {
+  let str = document.getElementById("number").value;
+  console.log(str, typeof str)
+  let num = Number(str)
+  console.log('num: ', num, typeof num)
+  document.getElementById('number-input').innerHTML = num + ' ' + typeof num
+}
 
+
+// Write a JavaScript program to convert a number to a string.
+  const convertNumToStr = () => {
+    let str = document.getElementById("string").value;
+    console.log(str, typeof str)
+    let num = Number(str)
+    console.log('num: ', num, typeof num)
+    document.getElementById('display-type-str').innerHTML = num + ' ' + typeof num
+  }
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -33,19 +45,53 @@ const displayDate = () => {
 
   
 // Write a JavaScript program that adds 2 numbers together.
+  var num1 = 1
+  var num2 = 2
 
-
+  const sumNumber = () => {
+    var x = Number(document.getElementById("x").value);
+    var y = Number(document.getElementById("y").value);
+    var result = x + y;
+    document.getElementById("display-sum").innerHTML = result;
+  }
 
 // Write a JavaScript program that runs only when 2 things are true.
+  var input1 = 1
+  var input2 = 2
 
+  const twoTrue = () => {
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    if (a == "true" && b == "true"){
+      document.getElementById("display-true").innerHTML = "true";
+    }
+  }
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
+  var input1 = 1
+  var input2 = 2
 
+  const oneTrue = () => {
+    var c = document.getElementById("c").value;
+    var d = document.getElementById("d").value;
+    if(c == 'true' && !(d == 'true')){
+    document.getElementById("display-one-true").innerHTML = "true";
+  }
+}
 
 
 // Write a JavaScript program that runs when both things are not true.  
+  var input1 = 1
+  var input2 = 2
 
+  const noneTrue = () => {
+    var c = document.getElementById("e").value;
+    var d = document.getElementById("f").value;
+    if(c !== '' && d !== ''){
+    document.getElementById("display-not-true").innerHTML = "true";
+  }
+}
 // ***************************
 //         PART TWO
 // ***************************
